@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>ustart</title>
+		<script src="js/layout.js"></script>
+		<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="bower_components/moment/min/moment.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+		<script src="js/register.js"></script>
+		<link rel="stylesheet" href="css/register.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+	</head>
+	<body onload="initialize(false);">
+		<div id="navBar"></div>
+		<style>
+		#inYr, #maj {
+			margin: 1em 0;
+			width: 100%;
+			padding: .3em 0;
+			border-radius: .2em;
+			border-color: #d9d9d9;
+			background-color: white;
+		}
+		</style>
+		<div id="centering">
+			<div id="content" style="width: 65vw; min-width: 22em; background-color: white; text-align: left;">
+				<div class="container">
+					<form class="form-signup" action="reg.php" method="post">
+						<br><br><br>
+						<h2 style="padding:0;">Register - It's free and easy.</h2>
+						<div class="row">
+                            <div class="dropdown col-sm-6">
+								<label for="fName" class="sr-only">First Name</label>
+								<input type="text" id="fName" name="firstName" class="form-control" placeholder="First Name" required autofocus>
+                            </div>
+							<div class="dropdown col-sm-6">
+								<label for="lName" class="sr-only">Last Name</label>
+								<input type="text" id="lName" name="lastName" class="form-control" placeholder="Last Name" required autofocus>
+							</div>
+						</div>
+						<div class="row">
+							<div class="dropdown col-sm-6">
+								<label for="inEmail" class="sr-only">Email address</label>
+								<input type="email" id="inEmail" name="inputEmail" class="form-control" placeholder="Email address" autofocus>
+							</div>
+							<div class="dropdown col-sm-6">
+								<label for="confirmEmail" class="sr-only">Confirm Email</label>
+								<input type="email" id="confirmEmail" class="form-control" placeholder="Confirm Email" autofocus>
+								<p id="eNoMatch" style="color:red; display:none;">Sorry, email do not match.</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="dropdown col-sm-6">
+								<label for="inPassword" class="sr-only">Password</label>
+								<input type="password" id="inPassword" name="inputPassword" class="form-control" placeholder="Password">
+							</div>
+							<div class="dropdown col-sm-6">
+								<label for="confirmPass" class="sr-only">Password</label>
+								<input type="password" id="confirmPass" class="form-control" placeholder="Confirm Password" >
+								<p id="pwNoMatch" style="color:red; display:none;">Sorry, passwords do not match.</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="dropdown col-sm-6">
+								<label for="uniName" class="sr-only">University</label>
+								<input type="text" id="uniName" name="universityName" class="form-control" placeholder="University Name"  autofocus>
+							</div>
+							<div class="dropdown col-sm-6">
+								<select id="maj" name="majors">
+								  <option value="major1">Major 1</option>
+								  <option value="major2">Major 2</option>
+								  <option value="major3">Major 3</option>
+								  <option value="major4">Major 4</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="dropdown col-sm-6">
+								<select id="inYr" name="year">
+								  <option value="fresh">Freshman</option>
+								  <option value="soph">Sophomore</option>
+								  <option value="junior">Junior</option>
+								  <option value="senior">Senior</option>
+								</select>
+							</div>
+							<div class='col-sm-6'>
+								<input type='text' placeholder="Graduation Date" class="form-control" id='datetimepicker4' name = "gradDate"/>
+							</div>
+							<script type="text/javascript">
+								$(function () {
+								  $('#datetimepicker4').datetimepicker({format: 'YYYY/MM/DD'});
+								  });
+							</script>
+						</div>
+                        <br>
+                        <div style="margin-left:auto; margin-right:auto; width: 305px;">
+                            <div class="g-recaptcha" data-sitekey="6Lc28xgUAAAAAJ3r2-QOBdhZFZocQKqfgXZKUAqU"></div>
+                        </div>
+						<button onclick="pwCheck()" class="btn btn-lg btn-primary btn-block" type="submit" name = "send" id="finished">Continue</button>
+						<br><br><br>
+					</form>
+				</div>
+				<!-- /container -->
+			</div>
+		</div>
+		<div id="theLogIn" style="visibility:hidden;"></div>
+		<footer id="foot"></footer>
+	</body>
+</html>

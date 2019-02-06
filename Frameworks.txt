@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<br><a href=https://www.webtoolkit.eu/wt> Wt : a C++ Web Toolkit </a></br>
+
+<br><a href=http://cppcms.com/wikipp/en/page/main>CppCMS</a></br>
+<br><a href=https://code.facebook.com/posts/1503205539947302/?attachment_canonical_url=https%3A%2F%2Fcode.facebook.com%2Fposts%2F1503205539947302%2F> Proxygen </a></br>
+<br><a href=http://www.micronovae.com/CSP.html> micronovae</a></br>
+<br><a href=http://www.roguewave.com/products-services/hydraexpress> RogueWave </a></br>
+<br><a href=https://www.sitepoint.com/developing-php-extensions-c-php-cpp-advanced/> SitePoint</a></br>
+<br><a href=http://www.php-cpp.com/ >php-cpp</a></br>
+<br><a href= http://www.seastar-project.org/>Seastar </a></br>
+<br><a href= http://binarytiers.org/> Binary Tiers </a></br>
+
+</html>
